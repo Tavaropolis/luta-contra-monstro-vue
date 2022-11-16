@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+
+.container-vidas {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 50px auto;
+    width: 80vW;
+    height: 12vh;
+}
+
+template{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.player {
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.barra-externa {
+	height: 30px;
+	width: 300px;
+	border: 1px solid #000;
+}
+
+.barra-interna {
+	height: 100%;
+    max-width: 100%;
+    min-width: 0%;
+    background-color: rgb(8, 176, 8);
+}
+
+.perigo {
+    background: red;
+}
+
+.vida {
+    font-size: 1.05rem;
+	text-align: center;
+}
+
+.container-resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 80vW;
+    height: 10vh;;
+}
+
+.resultado {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.vitoria {
+    color: rgb(8, 176, 8)
+}
+
+.container-botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 80vW;
+    height: 10vh;;
+}
+
+.container-log {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 80vW;
+    height: 50vh;
+    overflow: auto;
+}
+
+li {
+    width: 70vw;
+    height: 30px;
+    margin: 0 auto;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.logMonstro {
+    background-color: tomato;
+}

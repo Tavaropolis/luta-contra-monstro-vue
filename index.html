@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://unpkg.com/vue@2"></script>
+
+<div id="app">
+    <div class="container-vidas w3-container w3-border w3-border-grey">
+        <div class="container-player">
+            <p class="player">Jogador</p>
+            <div class="barra-externa">
+                <div class="barra-interna" :class="{perigo: vidaJogador < 20}":style="{width: vidaJogador + '%'}"></div>
+            </div>
+            <p class="vida">{{ vidaJogador }}%</p>
+        </div>
+        <div class="container-player">
+            <p class="player">Monstro</p>
+            <div class="barra-externa">
+                <div class="barra-interna" :class="{perigo: vidaMonstro < 20}" :style="{width: vidaMonstro + '%'}"></div>
+            </div>
+            <p class="vida">{{ vidaMonstro }}%</p>
+        </div>
+    </div>
+
+    <div v-if="vidaMonstro <= 0 || vidaJogador <= 0" class="container-resultado w3-container w3-border w3-border-grey">
+        <p class="resultado" :class="{vitoria}">{{ resultado }}</p>
+    </div>
+
+    <div class="container-botoes w3-container w3-border w3-border-grey">
+        <button class="w3-button w3-indigo w3-round" @click="iniciarJogo" v-if="!jogoAtivo">Iniciar Novo Jogo</button>
+        <div class="botoes-jogo" v-else>
+            <button class="w3-button w3-red w3-round" @click="atacarMonstro">Ataque</button>
+            <button class="w3-button w3-orange w3-round" @click="especialMonstro">Ataque Especial</button>
+            <button class="w3-button w3-green w3-round" @click="curarJogador">Curar</button>
+            <button class="w3-button w3-grey w3-round" @click="desistirJogo">Desistir</button>
+        </div>
+    </div>
+
+    <div class="container-log w3-container w3-border w3-border-grey">
+        <ul>
+            <li class="w3-panel w3-round" v-for="movimento, i in movimentos" :class="{logMonstro: i % 2 == 0}">{{ movimento }}</li>
+        </ul>
+    </div>
+</div>
+
+<script src="app.js"></script>

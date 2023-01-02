@@ -25,3 +25,7 @@ As opções do jogador são as seguintes:
   
 ---
 Tentei aplicar os conceitos aprendidos neste capitulo, das estruturas básicas do Vue (data, methods, computed e watch), bem como as diretivas mais importantes (v-bind, v-on, v-model, v-for, etc). Também utilizei estilização dinâmica de CSS, e algumas incorporações de classes de W3.css.
+
+
+https://user-images.githubusercontent.com/66395880/210224860-fc2fc070-df2b-48de-b93e-10d880a1483c.mp4
+
